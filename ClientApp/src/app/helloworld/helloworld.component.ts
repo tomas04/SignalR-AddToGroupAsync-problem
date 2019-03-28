@@ -13,7 +13,7 @@ export class HelloWorldComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log("Invoking state");
+    console.log("Listening to state");
     this.signalRService.hubConnection.on('state', (data: string) => {
       console.log("Message received: " + data)
     });
